@@ -84,7 +84,7 @@ func (a *atm) Balance() {
 	bal := a.getBalance()
 	balOut := fmt.Sprintf("Your current balance is: $%v\n", bal)
 	for _, n := range a.notes {
-		balOut += fmt.Sprintf("\t%v: $%v\n", n.GetValue(), n.GetCount())
+		balOut += fmt.Sprintf("\t$%v: %v\n", n.GetValue(), n.GetCount())
 	}
 	fmt.Println(balOut)
 }

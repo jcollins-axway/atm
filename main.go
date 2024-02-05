@@ -7,9 +7,18 @@ import (
 )
 
 func main() {
-	a := atm.InitATM()
+	// a := atm.InitATM()
+	// require initial deposit
+	// a.Deposit()
 
-	a.Deposit()
+	// preload atm
+	a := atm.InitATM(
+		atm.WithTwenties(5),
+		atm.WithFifties(5),
+		atm.WithHundreds(5),
+		atm.WithTwoHundreds(5),
+		atm.WithFiveHundreds(5),
+	)
 
 	for {
 		var action string
